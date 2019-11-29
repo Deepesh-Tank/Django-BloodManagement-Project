@@ -1,0 +1,172 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Blood Donation</title>
+    <!--<style>
+    .btn {
+      border: none;
+      background-color: inherit;
+      padding: 14px 28px;
+      font-size: 16px;
+      cursor: pointer;
+      display: inline-block;
+    }
+    .btn:hover {background: #eee;}
+    .success {color: green;}
+    .info {color: dodgerblue;}
+    .warning {color: orange;}
+    .danger {color: red;}
+    .default {color: black;}
+  </style>-->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="{% static 'css/swiper.min.css' %}">
+    <!-- Styles -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/custom.js' %}"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="nav-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
+                        <div class="site-branding d-flex align-items-center">
+                           <a class="d-block" href="index" rel="home"><img class="d-block" src="{% static 'images/logo.png' %}" alt="BLOOD DONATION"><b>BLOOD DONATION</b></a>
+                        </div><!-- .site-branding -->
+                        <nav class="site-navigation d-flex justify-content-end align-items-center">
+                            <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-items-center">
+                          <!--      <li class="current-menu-item"><a href="index">Home</a></li> -->
+                        <!--        <li><a href="about.html">About us</a></li> -->
+                                <li><a href="rlist">Request List</a></li>
+                                <li><a href="dlist">Donor List</a></li>
+                                {% if user.is_authenticated %}
+                                <li>HELLO, {{user.first_name}}</li>
+                                <li><a href="logout">logout</a></li>
+                                {% else %}
+                                <li><a href="register">Register</a></li>
+                                <li><a href="login">Login</a></li>
+                                {% endif %}
+                                <li class="call-btn button gradient-bg mt-3 mt-md-0">
+                                    <a class="d-flex justify-content-center align-items-center" href="#"><img src="{% static 'images/emergency-call.png' %}"> +91 9928681900</a>
+                                </li>
+                            </ul>
+                        </nav><!-- .site-navigation -->
+                    </div><!-- .col -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .nav-bar -->
+        <div class="swiper-container hero-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide hero-content-wrap" style="background-image: url({% static 'images/hero.jpg' %})">
+
+                </div><!-- .hero-content-wrap -->
+                 <!-- .hero-content-wrap -->
+            </div><!-- .swiper-wrapper -->
+          <!--  <div class="pagination-wrap position-absolute w-100">
+                <div class="swiper-pagination d-flex flex-row flex-md-column"></div>
+            </div><!-- .pagination-wrap -->
+        </div><!-- .hero-slider -->
+    </header><!-- .site-header -->
+
+<br><br><br>
+    {% if user.is_authenticated %}
+<!--    <button class="btn success"><a href="index1">Donate Blood</a></button>
+    <button class="btn info"><a href="index2">Request Blood</a></button>-->
+    <a href="index1" class="action-button shadow animate blue">Donate Blood</a>
+    <a href="index2" class="action-button shadow animate red">Request Blood</a>
+    <a href="test" class="action-button shadow animate yellow">Blood Banks Availability</a>
+    <a href="test1" class="action-button shadow animate green">Blood Camps</a>
+    <a href="facts" class="action-button shadow animate blue">Blood Facts</a>
+    {% endif %}
+    <div>
+
+ <a href="rlist" class="action-button shadow animate red">Request List</a>
+ <a href="dlist" class="action-button shadow animate yellow">Donor list</a>
+ <a href="check" class="action-button shadow animate blue">Who can Donate Blood</a>
+ <a href="chart1" class="action-button shadow animate yellow">Chart for Blood Donor</a>
+ <a href="sing" class="action-button shadow animate green">About Us</a>
+</div>
+<!--
+    <div>
+      <style scoped>
+          @import "{% static 'button/main.css' %}";
+          @import "{% static 'button/main.jss' %}";
+      </style>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+  <defs>
+    <filter id="goo">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+      <feComposite in="SourceGraphic" in2="goo"/>
+    </filter>
+  </defs>
+</svg>
+
+<span class="button--bubble__container">
+  <a href="#campaign" class="button button--bubble">
+    Hover me
+  </a>
+  <span class="button--bubble__effect-container">
+    <span class="circle top-left"></span>
+    <span class="circle top-left"></span>
+    <span class="circle top-left"></span>
+
+    <span class="button effect-button"></span>
+
+    <span class="circle bottom-right"></span>
+    <span class="circle bottom-right"></span>
+    <span class="circle bottom-right"></span>
+  </span>
+</span>
+</div>
+-->
+<!--    <button class="btn warning"><a href="rlist">Request List</a></button>-->
+<!--    <button class="btn danger"><a href="donorlist">Donor List</a></button>-->
+  <!--  <button class="btn danger"><a href="dlist">Donor List</a></button>-->
+    <div class="homepage-boxes">
+        <div class="container">
+            <div class="row">
+            </div>
+        </div>
+    </div>
+    <footer class="site-footer">
+        <div class="footer-widgets">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="foot-about">
+                            <h2><a href="#"><img src="{% static 'images/logo.png' %}" alt=""></a></h2>
+                            <p>“The Blood You Donate Gives Someone Another Chance At Life. One Day That Someone May Be A Close Relative, A Friend, A Loved One—Or Even You.”</p>
+                        </div><!-- .foot-about -->
+                    </div><!-- .col -->
+                    <div class="col-12 col-md-6 col-lg-4 mt-5 mt-md-0">
+                        <div class="foot-contact">
+                            <h2>Contact</h2>
+                            <ul class="p-0 m-0">
+                                <li><span>Address:</span>CV Raman hostel IIT BHU</li>
+                                <li><span>Phone:</span>+91 9928681900</li>
+                                <li><span>Email:</span>donateblood_savelife@gmail.com</li></left>
+                            </ul>
+                        </div>
+                    </div><!-- .col -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .footer-widgets -->
+    </footer><!-- .site-footer -->
+    <script type='text/javascript' src='static/js/jquery.js'></script>
+    <script type='text/javascript' src='static/js/jquery.collapsible.min.js'></script>
+    <script type='text/javascript' src='static/js/swiper.min.js'></script>
+    <script type='text/javascript' src='staticjs/jquery.countdown.min.js'></script>
+    <script type='text/javascript' src='static/js/circle-progress.min.js'></script>
+    <script type='text/javascript' src='static/js/jquery.countTo.min.js'></script>
+    <script type='text/javascript' src='static/js/jquery.barfiller.js'></script>
+    <script type='text/javascript' src='static/js/custom.js'></script>
+</body>
+</html>

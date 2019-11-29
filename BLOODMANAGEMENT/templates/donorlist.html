@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<title>Table V02</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{% static 'OTHER/images/icons/favicon.ico' %}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'OTHER/vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'OTHER/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'OTHER/vendor/animate/animate.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'OTHER/vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'OTHER/vendor/perfect-scrollbar/perfect-scrollbar.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'OTHER/css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'OTHER/css/main.css' %}">
+<!--===============================================================================================-->
+</head>
+<body>
+<!--	<center>the donor list <br>
+	<form method="post" action="req">
+		{% csrf_token %}
+			<select name="blood_group" placeholder="blood Group">
+					<option value="A+">A+</option>
+					<option value="A-">A-</option>
+					<option value="B+">B+</option>
+					<option value="B-">B-</option>
+					<option value="AB+">AB+</option>
+					<option value="AB-">AB-</option>
+					<option value="O+">O+</option>
+					<option value="O-">O-</option>
+			</select>
+			<select name="city" placeholder="City">
+					<option>Varanasi</option>
+					<option>Delhi</option>
+			</select>
+      <br>
+			<input type="submit" value="Search">
+	</form></center>-->
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+					<div class="table">
+
+						<div class="row header">
+							<div class="cell">
+								Full Name
+							</div>
+							<div class="cell">
+								City
+							</div>
+							<div class="cell">
+								Blood Group
+							</div>
+							<div class="cell">
+								Contact
+							</div>
+						</div>
+						{% for i in a %}
+						<div class="row">
+							<div class="cell" data-title="Full Name">
+								{{i.donorname}}
+
+							</div>
+							<div class="cell" data-title="	Age">
+								{{i.city}}
+
+							</div>
+							<div class="cell" data-title="Job Title">
+								{{i.blood_group}}
+
+							</div>
+							<div class="cell" data-title="Location">
+								{{i.contact}}
+							</div>
+						</div>
+						{%endfor%}
+					</div>
+			</div>
+		</div>
+	</div>
+<a href="index">HOME</a>
+<br><br><br>
+<!--===============================================================================================-->
+	<script src="{% static 'OTHER/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'OTHER/vendor/bootstrap/js/popper.js' %}"></script>
+	<script src="{% static 'OTHER/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'OTHER/vendor/select2/select2.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'OTHER/js/main.js' %}"></script>
+
+</body>
+</html>

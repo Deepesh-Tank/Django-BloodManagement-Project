@@ -1,0 +1,77 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+    <!-- Title Page-->
+    <title>Register</title>
+    <!-- Icons font CSS-->
+    <!-- Main CSS-->
+    <link href="{% static 'css/main.css'%}" rel="stylesheet" media="all">
+</head>
+<!--<label for="userPassword">Password: </label>
+<input id="userPassword" type="password">-->
+<body>
+    <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-1">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <h2 class="title">Registration</h2>
+                    <form action="register" method="post">
+                      {% csrf_token %}
+                      <label for="00A">First name: </label>
+                      <br>
+                      <input type="text" id ="00A" name="first_name" placeholder="first name"><br>
+                      <br>
+                      <label for="00B">Last name: </label>
+                      <br>
+                      <input type="text" id ="00B" name="last_name" placeholder="last name"><br>
+                      <br>
+                      <label for="00C">User name: </label>
+                      <br>
+                      <input type="text" id ="00C" name="username" placeholder="username"><br>
+                      <br>
+                      <label for="00D">Email: </label>
+                      <br>
+                      <input type="email" id ="00D" name="email" placeholder="email"><br>
+                      <br>
+                      <label for="00E">Password: </label>
+                      <br>
+                      <input type="password" id ="00E" name="password1" placeholder="password"><br>
+                      <br>
+                      <label for="00F">Confirm Password: </label>
+                      <br>
+                      <input type="password" id ="00F" name="password2" placeholder="confirm password"><br>
+                      <br>
+                      <input type="submit" value="Register">
+
+                    </form>
+                    <div>
+
+                      {% for message in messages %}
+                      {{message}} <br>
+                      {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+
+
+    <!-- Main JS-->
+    <script src="{% static 'js/global.js'%}"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->

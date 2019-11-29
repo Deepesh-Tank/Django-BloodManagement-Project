@@ -1,0 +1,205 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blood Camps</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Open+Sans" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+		table {
+		  border-collapse: collapse;
+		  width: 100%;
+		}
+		
+		th, td {
+		  text-align: left;
+		  padding: 8px;
+		}
+		
+		tr:nth-child(even){background-color: #f2f2f2}
+		
+		th {
+		  background-color: #4CAF50;
+		  color: white;
+		}
+		</style>
+<style type="text/css">
+body {
+	font-family: "Open Sans", sans-serif;
+}
+h2 {
+	color: #333;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: "Roboto", sans-serif;
+	font-weight: bold;
+	position: relative;
+	margin: 30px 0 60px;
+}
+h2::after {
+	content: "";
+	width: 100px;
+	position: absolute;
+	margin: 0 auto;
+	height: 3px;
+	background: #8fbc54;
+	left: 0;
+	right: 0;
+	bottom: -10px;
+}
+.col-center {
+	margin: 0 auto;
+	float: none !important;
+}
+.carousel {
+	margin: 50px auto;
+	padding: 0 70px;
+}
+.carousel .item {
+	color: #999;
+	font-size: 14px;
+    text-align: center;
+	overflow: hidden;
+    min-height: 290px;
+}
+.carousel .item .img-box {
+	width: 135px;
+	height: 135px;
+	margin: 0 auto;
+	padding: 5px;
+	border: 1px solid #ddd;
+	border-radius: 50%;
+}
+.carousel .img-box img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	border-radius: 50%;
+}
+.carousel .testimonial {
+	padding: 30px 0 10px;
+}
+.carousel .overview {	
+	font-style: italic;
+}
+.carousel .overview b {
+	text-transform: uppercase;
+	color: #7AA641;
+}
+.carousel .carousel-control {
+	width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    top: 50%;
+	background: none;
+}
+.carousel-control i {
+    font-size: 68px;
+	line-height: 42px;
+    position: absolute;
+    display: inline-block;
+	color: rgba(0, 0, 0, 0.8);
+    text-shadow: 0 3px 3px #e6e6e6, 0 0 0 #000;
+}
+.carousel .carousel-indicators {
+	bottom: -40px;
+}
+.carousel-indicators li, .carousel-indicators li.active {
+	width: 10px;
+	height: 10px;
+	margin: 1px 3px;
+	border-radius: 50%;
+}
+.carousel-indicators li {	
+	background: #999;
+	border-color: transparent;
+	box-shadow: inset 0 2px 1px rgba(0,0,0,0.2);
+}
+.carousel-indicators li.active {	
+	background: #555;		
+	box-shadow: inset 0 2px 1px rgba(0,0,0,0.2);
+}
+</style>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-md-8 col-center m-auto">
+			<h2>BLOOD Camps</h2>
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+				<!-- Carousel indicators -->
+				<ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
+				</ol>   
+				<!-- Wrapper for carousel items -->
+				<div class="carousel-inner">
+				<div class="item carousel-item active">
+						<div class="img-box"><img src="{% static 'images/gh.jpeg' %}" alt=""></div>
+						<p class="testimonial">Swipe To see Blood Camps</p>
+						<p class="overview"><b></b></p>
+					</div>
+					{% for i in a %}
+					<div class="item carousel-item">
+						<div class="img-box"><img src="{% static 'images/gh.jpeg' %}" alt=""></div>
+						<p class="testimonial">
+								{{i.blood_camp_name}}<br>	
+					</p>
+						<p class="overview"><b>{{i.address}}</b>, <br> call {{i.contact_no}}</p>
+						{% if i.adress_key == "1" %}
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112048.74945935723!2d77.16073039430748!3d28.64404235876596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1df3a994515b%3A0x791142ca7dea6bad!2sBloodConnect!5e0!3m2!1sen!2sin!4v1574431381422!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+						{% endif %}
+						{% if i.adress_key == "2" %}
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112048.74945935723!2d77.16073039430748!3d28.64404235876596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfde0433b3fd3%3A0xff8d01ae3b4ae3c6!2sDonate%20Blood!5e0!3m2!1sen!2sin!4v1574431437684!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+						{% endif %}
+						{% if i.adress_key == "3" %}
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241300.9014435963!2d72.72569173987645!3d19.093323561300693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cff34fe2640d%3A0x69f50952da1f76e5!2sMegaMan%20Blood%20Donation%20Camp!5e0!3m2!1sen!2sin!4v1574431490585!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+						{% endif %}
+						{% if i.adress_key == "4" %}
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57707.43921784325!2d82.94943947377762!3d25.3137793835287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e318ea72ee1eb%3A0x547e6b1270a40b7a!2sBlood%20Bank%20Sir%20Sundar%20Lal%20Hospital%20BHU!5e0!3m2!1sen!2sin!4v1574431540984!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+						{% endif %}
+					</div>
+					{%endfor%}
+					<!----s	<div class="item carousel-item">
+						<div class="img-box"><img src="/examples/images/clients/3.jpg" alt=""></div>
+						<p class="testimonial">Phasellus vitae suscipit justo. Mauris pharetra feugiat ante id lacinia. Etiam faucibus mauris id tempor egestas. Duis luctus turpis at accumsan tincidunt. Phasellus risus risus, volutpat vel tellus ac, tincidunt fringilla massa. Etiam hendrerit dolor eget rutrum.</p>
+						<p class="overview"><b>Michael Holz</b>, Seo Analyst</p>
+					</div> -->
+				</div>
+				<!-- Carousel controls -->
+				<a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev">
+					<i class="fa fa-angle-left"></i>
+				</a>
+				<a class="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next">
+					<i class="fa fa-angle-right"></i>
+				</a>
+				<a href="index">HOME</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!---<div id="map">
+<script>
+	function initMap(){
+		var location = {lat: 25.337110,lng: 83.019180};
+		var map = new google.maps.Map(document.getElementById("map"), {
+			zoom: 4,
+			center: location
+		} );
+	}
+
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKlWzAZIcddbHF1wR2fLWusk8MhkNysCk&callback=initMap">
+	 
+</script>
+</div>--->
+
+</body>
+</html>                                		                            

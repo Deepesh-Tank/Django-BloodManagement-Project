@@ -1,0 +1,300 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Blood Donation</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="{% static 'css/swiper.min.css' %}">
+    <!-- Styles -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/custom.js' %}"></script>
+    <style>
+            table {
+              border-collapse: collapse;
+              width: 100%;
+            }
+            
+            th, td {
+              text-align: left;
+              padding: 8px;
+            }
+            
+            tr:nth-child(even){background-color: #f2f2f2}
+            
+            th {
+              background-color: #4CAF50;
+              color: white;
+            }
+            </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="nav-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
+                        <div class="site-branding d-flex align-items-center">
+                           <a class="d-block" href="index" rel="home"><img class="d-block" src="{% static 'images/logo.png' %}" alt="logo"><b>BLOOD DONATION</b></a>
+                        </div><!-- .site-branding -->
+                        <nav class="site-navigation d-flex justify-content-end align-items-center">
+                            <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-items-center">
+                          <!--      <li class="current-menu-item"><a href="index.html">Home</a></li> -->
+
+                                <li class="call-btn button gradient-bg mt-3 mt-md-0">
+                                    <a class="d-flex justify-content-center align-items-center" href="#"><img src="{% static 'images/emergency-call.png' %}"> +34 586 778 8892</a>
+                                </li>
+                            </ul>
+                        </nav><!-- .site-navigation -->
+                        <div class="hamburger-menu d-lg-none">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div><!-- .hamburger-menu -->
+                    </div><!-- .col -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .nav-bar -->
+        <div class="swiper-container hero-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide hero-content-wrap" style="background-image: url({% static 'images/hero.jpg' %})">
+                    <div class="hero-content-overlay position-absolute w-100 h-100">
+                        <div class="container h-100">
+                            <div class="row h-100">
+                                <div class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-start">
+                                    <header class="entry-header">
+                                        <h1><br></h1>
+                                    </header><!-- .entry-header -->
+                                    <div class="entry-content mt-4">
+                                        <p></p>
+                                    </div><!-- .entry-content -->
+                                    <footer class="entry-footer d-flex flex-wrap align-items-center mt-4">
+                                    </footer><!-- .entry-footer -->
+                                </div><!-- .col -->
+                            </div><!-- .row -->
+                        </div><!-- .container -->
+                    </div><!-- .hero-content-overlay -->
+                </div><!-- .hero-content-wrap -->
+                <div class="swiper-slide hero-content-wrap" style="background-image: url({% static 'images/hero.jpg' %})">
+                    <div class="hero-content-overlay position-absolute w-100 h-100">
+                        <div class="container h-100">
+                            <div class="row h-100">
+                                <div class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-start">
+                                    <header class="entry-header">
+                                        <h1><br></h1>
+                                    </header><!-- .entry-header -->
+                                    <div class="entry-content mt-4">
+                                        <p> </p>
+                                    </div><!-- .entry-content -->
+                                    <footer class="entry-footer d-flex flex-wrap align-items-center mt-4">
+                                    </footer><!-- .entry-footer -->
+                                </div><!-- .col -->
+                            </div><!-- .row -->
+                        </div><!-- .container -->
+                    </div><!-- .hero-content-overlay -->
+                </div><!-- .hero-content-wrap -->
+                <div class="swiper-slide hero-content-wrap" style="background-image: url({% static 'images/hero.jpg' %})">
+                    <!--<div class="hero-content-overlay position-absolute w-100 h-100">
+                        <div class="container h-100">
+                            <div class="row h-100">
+                                <div class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-start">
+                                    <header class="entry-header">
+                                        <h1><br></h1>
+                                    </header>
+                                    <div class="entry-content mt-4">
+                                        <p></p>
+                                    </div>
+                                    <footer class="entry-footer d-flex flex-wrap align-items-center mt-4">
+                                    </footer><
+                                </div>-->
+                            </div><!-- .row -->
+                        </div><!-- .container -->
+                    </div><!-- .hero-content-overlay -->
+                </div><!-- .hero-content-wrap -->
+            </div><!-- .swiper-wrapper -->
+      <!--      <div class="pagination-wrap position-absolute w-100">
+                <div class="swiper-pagination d-flex flex-row flex-md-column"></div>
+            </div><-->
+        </div><!-- .hero-slider -->
+    </header><!-- .site-header -->
+    <br><br>
+    <a href="index" class="action-button shadow animate blue">HOME</a>
+    <div class="homepage-boxes">
+        <div class="container">
+            <div class="row">
+               <!----{% if user.is_authenticated %}
+                <div class="col-12 col-md-6 col-lg-5 mt-5 mt-lg-0">
+                    <div class="appointment-box">
+                        <h2 class="d-flex align-items-center">Donate Blood</h2>
+                        <form class="d-flex flex-wrap justify-content-between" method="post" action="donate">
+                          {% csrf_token %}
+                            <select class="select-blood-group" name="blood_group">
+                              <option value="A+">A+</option>
+                              <option value="A-">A-</option>
+                              <option value="B+">B+</option>
+                              <option value="B-">B-</option>
+                              <option value="AB+">AB+</option>
+                              <option value="AB-">AB-</option>
+                              <option value="O+">O+</option>
+                              <option value="O-">O-</option>
+                            </select>
+                            <select class="select-doctor" name="city">
+                                <option>Varanasi</option>
+                                <option>Delhi</option>
+                            </select>
+                            <input type="text" name="donorname" placeholder="Name">
+                            <input type="number" name="contact" placeholder="Phone No">
+                            <input class="button gradient-bg" type="submit" value="Request">
+                        </form>
+                {% endif %}-->
+                <div>
+
+                        <table style="width:100%">
+                                <tr>
+                                  <th>Age:</th>
+                                </tr>
+                                <tr>
+                                  <td>You are aged between 18 and 65. </td>
+                                </tr>
+                                <tr>
+                                    <td>In some countries national legislation permits 16–17 year-olds to donate provided that they fulfil the physical and hematological criteria required and that appropriate consent is obtained. </td>
+                                </tr>
+                                <tr>
+                                    <td>In some countries, regular donors over the age of 65 may be accepted at the discretion of the responsible physician. The upper age limit in some countries are 60.
+                                 </td>
+                                </tr>
+                              </table> 
+                    <br>
+                </div>
+                <div>
+
+                    <table style="width:100%">
+                            <tr>
+                              <th>Weight:</th>
+                            </tr>
+                            <tr>
+                              <td>You weigh at least 50 kg. </td>
+                            </tr>
+                            <tr>
+                                <td>In some countries, donors of whole blood donations should weigh at least 45 kg to donate 350 ml ± 10% .</td>
+                            </tr>
+                          </table> 
+                          <br>
+                <div>
+                    <!---------------------------->
+                        <div>
+
+                                <table style="width:100%">
+                                        <tr>
+                                          <th>Health: </th>
+                                        </tr>
+                                        <tr>
+                                          <td>You must be in good health at the time you donate.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>You cannot donate if you have a cold, flu, sore throat, cold sore, stomach bug or any other infection.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>If you have recently had a tattoo or body piercing you cannot donate for 6 months from the date of the procedure.  If the body piercing was performed by a registered health professional and any inflammation has settled completely, you can donate blood after 12 hours.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>If you have visited the dentist for a minor procedure you must wait 24 hours before donating; for major work wait a month.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>You must not donate blood If you do not meet the minimum haemoglobin level for blood donation</td>
+                                        </tr>
+                                        <tr>
+                                            <td>A test will be administered at the donation site. In many countries, a haemoglobin level of not less than 12.0 g/dl for females and not less than 13.0 g/dl for males as the threshold.</td>
+                                        </tr>
+                                      </table> 
+                            <div>
+                                <!---------------------------->
+                                 <!---------------------------->
+                        <div>
+
+                                <table style="width:100%">
+                                        <tr>
+                                          <th> Travel</th>
+                                        </tr>
+                                        <tr>
+                                          <td>Travel to areas where mosquito-borne infections are endemic, e.g. malaria, dengue and Zika virus infections, may result in a temporary deferral .</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Many countries also implemented the policy to defer blood donors with a history of travel or residence for defined cumulative exposure periods in specified countries or areas, as a measure to reduce the risk of transmitting variant Creutzfeldt-Jakob Disease (vCJD) by blood transfusion.</td>
+                                        </tr>
+                                      </table> 
+                                      <br>
+                            <div>
+                                <!---------------------------->
+                                 <!---------------------------->
+                        <div>
+
+                                <table style="width:100%">
+                                        <tr>
+                                          <th> Behaviours</th>
+                                        </tr>
+                                        <tr>
+                                          <td>You must not give blood:
+
+                                                If you engaged in “at risk” sexual activity in the past 12 months</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Individuals with behaviours below will be deferred permanently: <br>
+
+                                                 1.      Have ever had a positive test for HIV (AIDS virus) <br>
+                                                    
+                                                 2.      Have ever injected recreational drugs.</td>
+                                        </tr>
+                                      </table> 
+                                      <br>
+                            <div>
+
+                                
+
+                <br>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-widgets">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="foot-about">
+                            <h2><a href="#"><img src="{% static 'images/logo.png' %}" alt=""></a></h2>
+                            <p>“The Blood You Donate Gives Someone Another Chance At Life. One Day That Someone May Be A Close Relative, A Friend, A Loved One—Or Even You.”</p>
+                        </div><!-- .foot-about -->
+                    </div><!-- .col -->
+                    <div class="col-12 col-md-6 col-lg-4 mt-5 mt-md-0">
+                        <div class="foot-contact">
+                            <h2>Contact</h2>
+                            <ul class="p-0 m-0">
+                                <li><span>Address:</span>CV Raman hostel IIT BHU</li>
+                                <li><span>Phone:</span>+91 9928681900</li>
+                                <li><span>Email:</span>donateblood_savelife@gmail.com</li></left>
+                            </ul>
+                        </div>
+                    </div><!-- .col -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .footer-widgets -->
+    </footer><!-- .site-footer -->
+    <script type='text/javascript' src='static/js/jquery.js'></script>
+    <script type='text/javascript' src='static/js/jquery.collapsible.min.js'></script>
+    <script type='text/javascript' src='static/js/swiper.min.js'></script>
+    <script type='text/javascript' src='staticjs/jquery.countdown.min.js'></script>
+    <script type='text/javascript' src='static/js/circle-progress.min.js'></script>
+    <script type='text/javascript' src='static/js/jquery.countTo.min.js'></script>
+    <script type='text/javascript' src='static/js/jquery.barfiller.js'></script>
+    <script type='text/javascript' src='static/js/custom.js'></script>
+</body>
+</html>

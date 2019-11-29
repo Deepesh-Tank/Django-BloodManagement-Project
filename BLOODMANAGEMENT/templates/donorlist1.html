@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    the donor List
+    <form method="post" action="don">
+      {% csrf_token %}
+        <select name="blood_group">
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+        </select>
+        <select name="city">
+            <option>Varanasi</option>
+            <option>Delhi</option>
+        </select>
+        <input type="submit" value="Search">
+    </form>
+    <br>
+    {% for i in a %}
+    {{i.donorname}}
+    {{i.city}}
+    {{i.blood_group}}
+    {{i.contact}}
+    {%endfor%}
+  </body>
+</html>

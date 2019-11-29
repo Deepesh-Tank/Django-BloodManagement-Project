@@ -1,0 +1,49 @@
+{% load static %}
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="colorlib.com">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+    <link href="{% static 'S/css/main.css' %}" rel="stylesheet" />
+    <title>Donor List</title>
+  </head>
+  <body>
+    <div class="s01">
+      <form method="post" action="don">
+        {% csrf_token %}
+        <fieldset>
+          <legend>Search for Nearest Donor</legend>
+        </fieldset>
+        <div class="inner-form">
+          <div class="input-field first-wrap">
+        <select id="search" name="blood_group" type="text" placeholder="Blood Group" />
+            <!--<select name="blood_group" placeholder="blood Group">-->
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+            </select>
+          </div>
+          <div class="input-field second-wrap">
+        <select id="location" name="city" type="text" placeholder="City" />
+            <!--<select name="city" placeholder="City">-->
+      					<option>Varanasi</option>
+                <option>Delhi</option>
+                <option>Mumbai</option>
+      			</select>
+          </div>
+          <div class="input-field third-wrap">
+        <!--    <input type="submit" value="Search">-->
+        <button class="btn-search" type="submit">Search</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

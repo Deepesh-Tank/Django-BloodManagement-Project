@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Us</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,500|Open+Sans" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<style type="text/css">
+	body {
+		background: #e6e6e6;
+	}
+	.accordion .card {
+		border: none;
+		margin-bottom: 2px;
+		border-radius: 0;
+		box-shadow: 0 0 6px rgba(0,0,0,0.2);
+	}
+	.accordion .card .card-header {
+		background: #6245dd;
+		padding-top: 7px;
+		padding-bottom: 7px;
+		border-radius: 0;
+	}
+	.accordion .card-header h2 {
+		color: #fff;
+		font-size: 1rem;
+		font-weight: 500;
+		font-family: "Roboto", sans-serif;
+	}
+	.accordion img {
+		width: 150px;
+	}
+	.accordion .card-header h2 span {
+		float: left;
+		margin-top: 10px;
+	}
+	.accordion .card-header .btn {
+		font-weight: 500;
+	}
+	.accordion .card-header i {
+		color: #fff;
+		font-size: 1.3rem;
+		margin: 0 6px 0 -10px;
+		font-weight: bold;
+		position: relative;
+		top: 5px;
+	}			
+	.accordion .card-header button:hover {
+		color: #23384e;
+	}
+	.accordion .card-body {
+		color: #666;
+	}
+</style>
+<script>
+	$(document).ready(function(){
+		// Add minus icon for collapse element which is open by default
+		$(".collapse.show").each(function(){
+			$(this).siblings(".card-header").find(".btn i").html("remove");
+		});
+		
+		// Toggle plus minus icon on show hide of collapse element
+		$(".collapse").on('show.bs.collapse', function(){
+			$(this).parent().find(".card-header .btn i").html("remove");
+		}).on('hide.bs.collapse', function(){
+			$(this).parent().find(".card-header .btn i").html("add");
+		});
+	});
+</script>
+</head>
+<body>
+    <br><br>
+       <center><h5 class="mt-0">ABOUT US</h5></center> 
+<div class="container">
+	<div class="row">
+		<div class="col-lg-8 offset-lg-2">
+			<div class="accordion mt-5" id="accordionExample">
+				<div class="card">
+					<div class="card-header" id="headingOne">
+						<h2 class="clearfix mb-0">
+							<a class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><i class="material-icons">add</i> About Project</a>									
+						</h2>
+					</div>
+					<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+						<div class="card-body">
+							<div class="media">
+							<!----	<img src="/examples/images/media/home.png" class="mr-3" alt="Home"> -->
+								<div class="media-body">
+									<h5 class="mt-0">Donate Blood Save life</h5>
+									<p>The initiative,"Donate Blood-Save Life" led by our team is mainly aimed at facilitating the availability of blood, whether urgent or not. Blood is the basic requirement that can only be fulfilled by donation and hence, we are providing a platform that allows users to act as donors as well as receivers depending on the need. <br> <br> Donors can directly be contacted by the patients in need of urgent blood and list of blood banks is also attached for reference. If you are a healthy individual and physically capable of donating blood, then why not do something good for someone? After all it feels good to save someone's life, isn't it? If you have an ill family member in an emergency, don't hesitate to call a donor or make a request for it.  <br><br>We guarantee full support and one of the quickest services you may get. We are driven by our passion to serve for the greater good.
+
+                                      <br><br>  For any query regarding any of our services, reach out to us at donateblood_savelife@gmail.com. <br><br>Never hesitate to ask for help, because for you there is always someone out there.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-header" id="headingTwo">
+						<h2 class="mb-0">
+							<a class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><i class="material-icons">add</i> Project Member 1</a>
+						</h2>
+					</div>
+					<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+						<div class="card-body">
+							<div class="media">
+								<img src="{% static 'images/deepesh.jpg' %}" class="mr-3" alt="Home"> 
+								<div class="media-body">
+									<h5 class="mt-0">Deepesh Tank</h5>
+									<p>Roll No : 18075017 <br>Email id : deepeshtank.cse18@itbhu.ac.in</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-header" id="headingThree">
+						<h2 class="mb-0">
+							<a class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><i class="material-icons">add</i> Project Member 2</a>                     
+						</h2>
+					</div>
+					<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+						<div class="card-body">
+							<div class="media">
+								<img src="{% static 'images/navneet.jpg' %}" class="mr-3" alt="Home">
+								<div class="media-body">
+									<h5 class="mt-0">Navneet Taunk</h5>
+									<p>Roll No : 18075041 <br>Email id : navneettaunk.cse18@itbhu.ac.in</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-header" id="headingFour">
+						<h2 class="mb-0">
+							<a class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"><i class="material-icons">add</i> Project Member 3</a>                               
+						</h2>
+					</div>
+					<div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+						<div class="card-body">
+							<div class="media">
+								<img src="{% static 'images/divij.jpeg' %}" class="mr-3" alt="Home">
+								<div class="media-body">
+									<h5 class="mt-0">Dvij Joshi</h5>
+									<p>Roll No : 18075026 <br>Email id : jdhirenkumar.cse18@itbhu.ac.in</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<center><a href="index" class="mt-0">HOME</a></center> 
+</body>
+</html>                            

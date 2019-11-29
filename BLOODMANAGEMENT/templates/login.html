@@ -1,0 +1,60 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+    <!-- Title Page-->
+    <title>login</title>
+    <!-- Icons font CSS-->
+    <!-- Main CSS-->
+    <link href="{% static 'css/main.css'%}" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-1">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <h2 class="title">Login</h2>
+                    <form action="login" method="post">
+                      {% csrf_token %}
+                      <label for="00C">User name: </label>
+                      <br>
+                      <input type="text" id ="00C" name="username" placeholder="username"><br>
+                      <br>
+                      <label for="00Q">Password: </label>
+                      <br>
+                      <input type="password" id="00Q" name="password" placeholder="password"><br>
+                      <br>
+                      <input type="submit" value="login">
+
+                    </form>
+                    <div>
+
+                      {% for message in messages %}
+                      {{message}}
+                      {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+
+
+    <!-- Main JS-->
+    <script src="{% static 'js/global.js'%}"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->
