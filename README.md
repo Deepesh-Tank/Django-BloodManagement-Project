@@ -1,1 +1,1 @@
-# MY_PROJECT
+First Django Project
