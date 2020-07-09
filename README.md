@@ -8,7 +8,8 @@ Some function of our project:
 -> location in map
 -> information regarding blood inventory
 -> address and contact details
-4) Show some intersting facts about blood
-5) Show who can donated blood.
-6) Show the height weight for a eligble donor.
+4) show location of near by blood camps for donation.
+5) Show some intersting facts about blood
+6) Show who can donated blood.
+7) Show the height weight for a eligble donor.
 some feature are available for all site visiter while all are available for logged in user.
